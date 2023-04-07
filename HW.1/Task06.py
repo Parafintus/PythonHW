@@ -11,15 +11,18 @@
 
 print('Введите номер билета')
 n = input()
-summ1 = 0
-summ2 = 0
-for i in range(0, 3):
-    summ1 += int(n[i])
+if len(n) == 6:
+    summ1 = 0
+    summ2 = 0
+    for i in range(0, 3):
+        summ1 += int(n[i])
 
-for i in range(3, 6):
-    summ2 += int(n[i])
+    for i in range(3, 6):
+        summ2 += int(n[i])
 
-if summ1 == summ2:
-    print('Билет счастливый')
+    if summ1 == summ2:
+        print('Билет счастливый')
+    else:
+        print("Билет НЕсчастливый")
 else:
-    print("Билет НЕсчастливый")
+    print("Ошибка ввода, введено не 6 знаков")
