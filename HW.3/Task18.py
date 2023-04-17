@@ -16,8 +16,10 @@ number = int(input('Введите количество элементов в с
 my_list = []
 for i in range(number):
     my_list.append(random.randint(0, 10))
-my_set = my_list
-print(my_set)
+
+print(my_list)
+my_list.sort()
+print(my_list)
 find_number = int(input('Введите искомое число: '))
 if find_number in my_list:
     print('Искомое число присутствует в  списке')
